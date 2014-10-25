@@ -13,6 +13,8 @@ int on[10][20][2] = {
   { {1,5}, {2,5}, {3,5}, {3,4}, {1,4}, {1,3}, {2,3}, {3,3}, {1,2}, {3,2}, {1,1}, {2,1}, {3,1} }, //8
   { {1,5}, {2,5}, {3,5}, {3,4}, {1,4}, {1,3}, {2,3}, {3,3}, {3,2}, {1,1}, {2,1}, {3,1}, {9,9} }  //9
   };
+  
+/* === DO NOT EDIT BELOW THIS === */
 
 void setup()
 {
@@ -39,6 +41,7 @@ void loop()
     if (on[a][i][1]==9&&on[a][i][0]==9)
     {
       delay(d*2);
+      //delayMicroseconds(d*2);
     }
     else
     {
@@ -46,10 +49,12 @@ void loop()
     digitalWrite(y[on[a][i][1]-1],HIGH);
     digitalWrite(x[on[a][i][0]-1],LOW);
     delay(d);
+    //delayMicroseconds(d);
     //turning off
     digitalWrite(y[on[a][i][1]-1],LOW);
     digitalWrite(x[on[a][i][0]-1],HIGH);
     delay(d);
+    //delayMicroseconds(d);
     }
   }
     }
